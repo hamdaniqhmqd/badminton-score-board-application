@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.tugas.kabaddikounter.ScoreViewModel" />
+    </data>
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:background="@color/hitam"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/garisTengah"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/labelPertandingan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/aldotheapache"
+                android:letterSpacing="0.1"
+                android:text="Skor Pertandingan"
+                android:textColor="@color/putih"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/kiri"
+                app:layout_constraintStart_toStartOf="@+id/kanan"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/labelNamaPertandingan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/easport"
+                android:letterSpacing="0.05"
+                android:text="Thomas Cup"
+                android:textColor="@color/putih"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toStartOf="@+id/kiri"
+                app:layout_constraintStart_toStartOf="@+id/kanan"
+                app:layout_constraintTop_toBottomOf="@+id/labelPertandingan"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/labelSkorA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/interbold"
+                android:text="Team A"
+                android:textColor="@color/putih"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_marginTop="36dp"
+                app:layout_constraintEnd_toStartOf="@+id/garisTengah"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelNamaPertandingan"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/SkorA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.scoreA.toString()}"
+                android:textStyle="bold"
+                android:textSize="72sp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/putih"
+                android:fontFamily="@font/aldotheapache"
+                app:layout_constraintEnd_toStartOf="@+id/garisTengah"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelSkorA"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/SkorA_Round1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textStyle="bold"
+                android:textSize="42sp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/putih"
+                android:fontFamily="@font/aldotheapache"
+                app:layout_constraintEnd_toStartOf="@+id/garisTengah"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SkorA"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/SkorA_Round2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textStyle="bold"
+                android:textSize="42sp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/putih"
+                android:fontFamily="@font/aldotheapache"
+                app:layout_constraintEnd_toStartOf="@+id/garisTengah"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SkorA_Round1"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/SkorA_Round3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textStyle="bold"
+                android:textSize="42sp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/putih"
+                android:fontFamily="@font/aldotheapache"
+                app:layout_constraintEnd_toStartOf="@+id/garisTengah"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SkorA_Round2"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/labelVs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inlanders_demo"
+                android:text="Vs"
+                android:textColor="@color/putih"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_marginTop="72dp"
+                app:layout_constraintEnd_toStartOf="@+id/garisTengah"
+                app:layout_constraintStart_toStartOf="@+id/garisTengah"
+                app:layout_constraintTop_toBottomOf="@+id/labelNamaPertandingan"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/labelRound1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldotheapache"
+                android:letterSpacing="0.06"
+                android:text="Round 1"
+                android:textColor="@color/putih"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="28dp"
+                app:layout_constraintEnd_toStartOf="@+id/garisTengah"
+                app:layout_constraintStart_toStartOf="@+id/garisTengah"
+                app:layout_constraintTop_toBottomOf="@+id/SkorB"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/labelRound2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldotheapache"
+                android:letterSpacing="0.06"
+                android:text="Round 2"
+                android:textColor="@color/putih"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="28dp"
+                app:layout_constraintEnd_toStartOf="@+id/garisTengah"
+                app:layout_constraintStart_toStartOf="@+id/garisTengah"
+                app:layout_constraintTop_toBottomOf="@+id/SkorB_Round1"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/labelRound3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldotheapache"
+                android:letterSpacing="0.06"
+                android:text="Round 3"
+                android:textColor="@color/putih"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="28dp"
+                app:layout_constraintEnd_toStartOf="@+id/garisTengah"
+                app:layout_constraintStart_toStartOf="@+id/garisTengah"
+                app:layout_constraintTop_toBottomOf="@+id/SkorB_Round2"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/labelSkorB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/interbold"
+                android:text="Team B"
+                android:textColor="@color/putih"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_marginTop="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/garisTengah"
+                app:layout_constraintTop_toBottomOf="@+id/labelNamaPertandingan"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/SkorB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.scoreB.toString()}"
+                android:textSize="72sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/putih"
+                android:fontFamily="@font/aldotheapache"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/garisTengah"
+                app:layout_constraintTop_toBottomOf="@+id/labelSkorB"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/SkorB_Round1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="42sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/putih"
+                android:fontFamily="@font/aldotheapache"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/garisTengah"
+                app:layout_constraintTop_toBottomOf="@+id/SkorB"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/SkorB_Round2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="42sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/putih"
+                android:fontFamily="@font/aldotheapache"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/garisTengah"
+                app:layout_constraintTop_toBottomOf="@+id/SkorB_Round1"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/SkorB_Round3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="42sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/putih"
+                android:fontFamily="@font/aldotheapache"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/garisTengah"
+                app:layout_constraintTop_toBottomOf="@+id/SkorB_Round2"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/TombolSatuSkorA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="+1"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:cornerRadius="8dp"
+                android:textColor="@color/hitam"
+                android:backgroundTint="@color/putih"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="42dp"
+                app:layout_constraintEnd_toStartOf="@+id/garisTengah"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SkorA_Round3"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/TombolSatuSkorB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="+1"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:cornerRadius="8dp"
+                android:textColor="@color/hitam"
+                android:backgroundTint="@color/putih"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="42dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/garisTengah"
+                app:layout_constraintTop_toBottomOf="@+id/SkorB_Round3"
+                tools:ignore="MissingConstraints" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/TombolReset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/merahHitam"
+                android:fontFamily="@font/interbold"
+                android:letterSpacing="0.06"
+                android:text="Reset"
+                android:textColor="@color/putih"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/kiri"
+                app:layout_constraintStart_toStartOf="@+id/kanan"
+                app:layout_constraintTop_toBottomOf="@+id/TombolSatuSkorB"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/kanan"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/kiri"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardPopUp"
+                android:layout_width="0dp"
+                android:layout_height="360dp"
+                android:visibility="gone"
+                android:background="@drawable/card_full_rounded"
+                android:backgroundTint="@color/hitam_smooth"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/kiri"
+                app:layout_constraintStart_toStartOf="@+id/kanan"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/gambar"
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/tropy"
+                    android:layout_marginTop="54dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/labelMenang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Team yang menang"
+                    android:textColor="@color/putih"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/boston"
+                    android:layout_marginTop="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gambar"
+                    tools:ignore="MissingConstraints" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tombolTutup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inlanders_demo"
+                    android:letterSpacing="0.06"
+                    android:text="Tutup"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    app:cornerRadius="8dp"
+                    android:textColor="@color/putih"
+                    android:backgroundTint="@color/biru"
+                    android:layout_marginTop="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/labelMenang" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

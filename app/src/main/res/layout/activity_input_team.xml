@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/hitam"
+            tools:context=".InputTeamActivity">
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/kanan"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/kiri"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <TextView
+                android:id="@+id/labelAtas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="54dp"
+                android:fontFamily="@font/inlanders_demo"
+                android:letterSpacing="0.05"
+                android:text="THOMAS CUP"
+                android:textAlignment="center"
+                android:textColor="@color/putih"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/kiri"
+                app:layout_constraintStart_toStartOf="@+id/kanan"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/labelKedua"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/easport"
+                android:letterSpacing="0.04"
+                android:text="Masukan team yang akan bertanding"
+                android:textAlignment="center"
+                android:textColor="@color/putih"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/kiri"
+                app:layout_constraintStart_toStartOf="@+id/kanan"
+                app:layout_constraintTop_toBottomOf="@+id/labelAtas"
+                tools:ignore="MissingConstraints" />
+
+            <View
+                android:id="@+id/wadahFooter"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="96dp"
+                android:background="@drawable/card_rounded_atas"
+                android:backgroundTint="@color/putih"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelKedua"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/labelTeamA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/easport"
+                android:text="Team A"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginTop="124dp"
+                app:layout_constraintEnd_toStartOf="@+id/kiri"
+                app:layout_constraintStart_toStartOf="@+id/kanan"
+                app:layout_constraintTop_toBottomOf="@+id/labelKedua"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/inputTeamA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/black"
+                android:textSize="24dp"
+                app:layout_constraintEnd_toStartOf="@+id/kiri"
+                app:layout_constraintStart_toStartOf="@+id/kanan"
+                app:layout_constraintTop_toBottomOf="@+id/labelTeamA"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/labelTeamB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/easport"
+                android:text="Team B"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/kiri"
+                app:layout_constraintStart_toStartOf="@+id/kanan"
+                app:layout_constraintTop_toBottomOf="@+id/inputTeamA"
+                tools:ignore="MissingConstraints" />
+
+            <EditText
+                android:id="@+id/inputTeamB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/black"
+                android:textSize="24dp"
+                app:layout_constraintEnd_toStartOf="@+id/kiri"
+                app:layout_constraintStart_toStartOf="@+id/kanan"
+                app:layout_constraintTop_toBottomOf="@+id/labelTeamB"
+                tools:ignore="MissingConstraints" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tombolSubmit"
+                android:layout_width="0dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="14dp"
+                android:backgroundTint="@color/biru"
+                android:fontFamily="@font/inlanders_demo"
+                android:letterSpacing="0.1"
+                android:textStyle="bold"
+                android:text="SUBMIT"
+                android:textColor="@color/putih"
+                android:textSize="24sp"
+                app:cornerRadius="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/kiri"
+                app:layout_constraintStart_toStartOf="@+id/kanan"
+                app:layout_constraintTop_toBottomOf="@+id/inputTeamB"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>
